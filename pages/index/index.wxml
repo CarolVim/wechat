@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="login-box">
+    <text class="title">欢迎使用我们的小程序</text>
+    <button class="auth-btn" 
+      bindtap="onGetUserProfile"
+      open-type="getUserProfile"
+      lang="zh_CN"
+    >授权登录</button>
+  </view>
+</view>

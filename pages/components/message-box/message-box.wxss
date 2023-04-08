@@ -1,0 +1,15 @@
+.message-content {
+  max-width: 80%;
+  margin: 10rpx;
+  padding: 20rpx;
+  border-radius: 10rpx;
+}
+
+.ai-message-box .message-content {
+  background-color: #f2f2f2;
+}
+
+.user-message-box .message-content {
+  background-color: #59a9ff;
+  color: #fff;
+}

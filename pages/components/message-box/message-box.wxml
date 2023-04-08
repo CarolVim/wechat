@@ -1,0 +1,5 @@
+
+<view class="message-box {{isUser ? 'user-message-box' : 'ai-message-box'}}" id="{{id}}">
+  <view class="message-content">{{message.content}}</view>
+  <view>Hello World</view>
+</view>

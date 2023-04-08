@@ -1,0 +1,24 @@
+<view class="container chatroom-container">
+  <view class="chat-list">
+    <scroll-view scroll-y="true" style="height: 100%;" bindscrolltolower="loadMore">
+      <block wx:if="{{messages.length}}">
+        <view wx:for="{{messages}}" wx:key="id">
+          <view class="{{item.type === 'user' ? 'user-message' : 'ai-message'}}">
+            <view class="avatar">{{item.type === 'user' ? '' : 'AI'}}</view>
+            <message-box class="message" message="{{item.content}}" type="{{item.type}}" position="{{item.type === 'user' ? 'right' : 'left'}}"/>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <view class="input-bar">
+    <view class="input-wrapper">
+      <view class="icon-btn" bindtap="onRecord">
+        <image src="/resources/icons/record.png" mode="aspectFit"></image>
+      </view>
+      <input class="input" placeholder="请输入消息" bindinput="onInputChange" value="{{inputValue}}" />
+      <view class="send-btn" bindtap="onSendMessage">发送</view>
+    </view>
+  </view>
+</view>
